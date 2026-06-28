@@ -1086,6 +1086,55 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
 .rev{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
 .rev.in{opacity:1;transform:none;}
 
+/* ── EXPORT MAP ── */
+.xmap-sec{background:#000208;padding:60px 0 0;overflow:hidden;}
+#xmap-canvas{width:100%;display:block;max-height:520px;}
+
+/* ── PRODUCT MOSAIC ── */
+.mosaic-sec{background:#000208;padding:0 24px 80px;}
+.mosaic-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:260px 260px 260px;
+  gap:14px;
+  max-width:1280px;
+  margin:0 auto;
+}
+.mg-item{
+  border-radius:18px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.06);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;padding:20px;
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+  opacity:0;transform:translateY(20px);
+}
+.mg-item.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease,border-color .35s ease,box-shadow .35s ease;}
+.mg-item:hover{border-color:rgba(56,189,248,.25);box-shadow:0 0 40px rgba(56,189,248,.08);transform:translateY(-4px);}
+.mg-item img{width:100%;height:100%;object-fit:contain;transition:transform .4s ease;}
+.mg-item:hover img{transform:scale(1.04);}
+/* grid placement */
+.mg-1{grid-column:1;grid-row:1/3;}
+.mg-2{grid-column:2/4;grid-row:1;}
+.mg-3{grid-column:4;grid-row:1;}
+.mg-4{grid-column:2;grid-row:2;}
+.mg-5{grid-column:3;grid-row:2;}
+.mg-6{grid-column:1/3;grid-row:3;}
+.mg-7{grid-column:3;grid-row:3;}
+.mg-8{grid-column:4;grid-row:2/4;}
+/* mobile mosaic */
+@media(max-width:760px){
+  .mosaic-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(5,180px);}
+  .mg-1{grid-column:1;grid-row:1/3;}
+  .mg-2{grid-column:2;grid-row:1;}
+  .mg-3{grid-column:2;grid-row:2;}
+  .mg-4{grid-column:1;grid-row:3;}
+  .mg-5{grid-column:2;grid-row:3;}
+  .mg-6{grid-column:1/3;grid-row:4;}
+  .mg-7{grid-column:1;grid-row:5;}
+  .mg-8{grid-column:2;grid-row:5;}
+}
+
 /* ══════════════════════════════════════════════
    MOBILE RESPONSIVE — full overhaul
    ══════════════════════════════════════════════ */
@@ -1269,6 +1318,25 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
     </div>
   </div>
 
+</section>
+
+<!-- EXPORT MAP -->
+<section class="xmap-sec">
+  <canvas id="xmap-canvas"></canvas>
+</section>
+
+<!-- PRODUCT MOSAIC -->
+<section class="mosaic-sec">
+  <div class="mosaic-grid">
+    <div class="mg-item mg-1"><img src="images/iphone-16-pro-max.png" alt="iPhone 16 Pro Max" loading="lazy"></div>
+    <div class="mg-item mg-2"><img src="images/macbook-pro-14.png" alt="MacBook Pro" loading="lazy"></div>
+    <div class="mg-item mg-3"><img src="images/MQD83.png" alt="AirPods Pro" loading="lazy"></div>
+    <div class="mg-item mg-4"><img src="images/ipad-pro-m4.png" alt="iPad Pro" loading="lazy"></div>
+    <div class="mg-item mg-5"><img src="images/garmin-hero.png" alt="Garmin" loading="lazy"></div>
+    <div class="mg-item mg-6"><img src="images/ps5-new.png" alt="PlayStation 5" loading="lazy"></div>
+    <div class="mg-item mg-7"><img src="images/dyson-hero.png" alt="Dyson" loading="lazy"></div>
+    <div class="mg-item mg-8"><img src="images/MQTP3.png" alt="AirPods Max" loading="lazy"></div>
+  </div>
 </section>
 
 <!-- BENTO GRID -->
@@ -2493,6 +2561,158 @@ const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});
 },{threshold:.1});
 document.querySelectorAll(".rev").forEach(el=>io.observe(el));
+
+// ── MOSAIC scroll reveal ──
+const mio = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");mio.unobserve(e.target);}});
+},{threshold:.08});
+document.querySelectorAll(".mg-item").forEach((el,i)=>{
+  el.style.transitionDelay = (i*80)+"ms";
+  mio.observe(el);
+});
+
+// ── EXPORT MAP canvas ──
+(function(){
+  const canvas = document.getElementById("xmap-canvas");
+  if(!canvas) return;
+  function resize(){
+    const w = canvas.parentElement.offsetWidth || window.innerWidth;
+    canvas.width = w;
+    canvas.height = Math.min(Math.round(w * 0.46), 520);
+  }
+  window.addEventListener("load", ()=>{ resize(); draw(); });
+  window.addEventListener("resize", resize);
+  const ctx = canvas.getContext("2d");
+
+  // Simplified continent polygons [lon, lat]
+  const LAND = [
+    // North America
+    [[-170,72],[-168,62],[-140,60],[-130,55],[-125,45],[-120,30],[-105,22],[-83,8],[-77,5],[-52,6],[-35,-5],[-35,-55],[-67,-55],[-70,-30],[-80,-5],[-80,10],[-65,10],[-55,20],[-60,32],[-65,44],[-75,45],[-82,44],[-92,46],[-110,50],[-130,55],[-140,60],[-160,68],[-170,72]],
+    // South America
+    [[-80,12],[-52,12],[-35,-5],[-35,-55],[-67,-55],[-70,-30],[-80,-5],[-80,12]],
+    // Europe
+    [[-10,36],[-10,58],[0,62],[10,65],[25,70],[30,60],[35,65],[40,60],[28,55],[25,45],[20,35],[5,36],[-10,36]],
+    // Africa
+    [[-18,15],[-15,30],[-5,37],[15,38],[32,31],[42,22],[42,12],[42,-12],[35,-20],[18,-35],[12,-18],[5,5],[-5,10],[-18,15]],
+    // Russia / CIS
+    [[30,60],[40,60],[60,68],[80,70],[100,68],[120,65],[130,60],[140,55],[135,45],[120,50],[100,50],[80,50],[60,55],[50,55],[30,60]],
+    // Middle East / Arabia
+    [[25,37],[35,37],[42,22],[55,23],[60,22],[58,12],[43,12],[35,15],[33,30],[25,37]],
+    // South + SE Asia
+    [[60,22],[72,20],[80,20],[90,22],[100,30],[110,22],[110,10],[100,5],[80,8],[60,22]],
+    // East Asia
+    [[100,50],[120,50],[135,35],[130,30],[120,25],[110,20],[100,10],[95,20],[100,30],[100,50]],
+    // Australia
+    [[114,-22],[122,-18],[138,-12],[148,-18],[152,-30],[144,-38],[130,-34],[114,-22]],
+    // Greenland
+    [[-50,60],[-20,65],[-18,72],[-30,84],[-50,84],[-60,76],[-60,64],[-50,60]],
+  ];
+
+  function ll(lon, lat){
+    const W = canvas.width, H = canvas.height;
+    return [(lon+180)/360*W, (90-lat)/180*H];
+  }
+
+  // Key points
+  const DUBAI    = ()=>ll(55.3, 25.2);
+  const ROUTES   = ()=>[
+    {end:ll(13, 52),  label:"EUROPE", color:"#38bdf8"},
+    {end:ll(68, 48),  label:"CIS",    color:"#a78bfa"},
+    {end:ll(18, 2),   label:"AFRICA", color:"#34d399"},
+  ];
+
+  let t = 0;
+  function draw(){
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0,0,W,H);
+
+    // Background
+    ctx.fillStyle="#000208"; ctx.fillRect(0,0,W,H);
+
+    // Subtle grid
+    ctx.strokeStyle="rgba(255,255,255,0.025)"; ctx.lineWidth=0.5;
+    for(let lon=-180;lon<=180;lon+=30){
+      const [x1,y1]=ll(lon,90),[x2,y2]=ll(lon,-90);
+      ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
+    }
+    for(let lat=-90;lat<=90;lat+=30){
+      const [x1,,]=ll(-180,lat),[x2]=ll(180,lat),[,y]=ll(0,lat);
+      ctx.beginPath();ctx.moveTo(x1,y);ctx.lineTo(x2,y);ctx.stroke();
+    }
+
+    // Continents
+    LAND.forEach(poly=>{
+      ctx.beginPath();
+      poly.forEach(([lon,lat],i)=>{const[x,y]=ll(lon,lat);i?ctx.lineTo(x,y):ctx.moveTo(x,y);});
+      ctx.closePath();
+      ctx.fillStyle="rgba(56,189,248,0.045)";ctx.fill();
+      ctx.strokeStyle="rgba(56,189,248,0.12)";ctx.lineWidth=0.7;ctx.stroke();
+    });
+
+    const dubai = DUBAI();
+    const routes = ROUTES();
+    t += 0.006;
+
+    // Routes
+    routes.forEach((r,i)=>{
+      const delay = i * 1.4;
+      const cycle = ((t - delay) % 3 + 3) % 3;
+      const p = Math.min(1, cycle / 1.5);
+      const cpx = (dubai[0]+r.end[0])/2;
+      const cpy = Math.min(dubai[1],r.end[1]) - H*0.18;
+
+      // Full faded trail
+      ctx.beginPath();
+      ctx.moveTo(dubai[0],dubai[1]);
+      ctx.quadraticCurveTo(cpx,cpy,r.end[0],r.end[1]);
+      ctx.strokeStyle=r.color+"22"; ctx.lineWidth=1; ctx.stroke();
+
+      // Animated bright segment
+      if(p>0){
+        const pts=[];
+        for(let j=0;j<=80;j++){const tt=j/80;pts.push([(1-tt)*(1-tt)*dubai[0]+2*(1-tt)*tt*cpx+tt*tt*r.end[0],(1-tt)*(1-tt)*dubai[1]+2*(1-tt)*tt*cpy+tt*tt*r.end[1]]);}
+        const s=Math.max(0,p-0.28), e=p;
+        const si=Math.floor(s*80), ei=Math.floor(e*80);
+        if(ei>si){
+          ctx.beginPath();
+          ctx.moveTo(pts[si][0],pts[si][1]);
+          for(let j=si+1;j<=ei;j++) ctx.lineTo(pts[j][0],pts[j][1]);
+          ctx.strokeStyle=r.color; ctx.lineWidth=1.8;
+          ctx.shadowBlur=8; ctx.shadowColor=r.color; ctx.stroke(); ctx.shadowBlur=0;
+        }
+      }
+
+      // Destination pulse
+      const pulse=(Math.sin(t*2.5+i*2.1)+1)/2;
+      ctx.beginPath();ctx.arc(r.end[0],r.end[1],3+pulse*7,0,Math.PI*2);
+      ctx.strokeStyle=r.color+Math.round(pulse*180).toString(16).padStart(2,"0");
+      ctx.lineWidth=1; ctx.stroke();
+      ctx.beginPath();ctx.arc(r.end[0],r.end[1],3,0,Math.PI*2);
+      ctx.fillStyle=r.color; ctx.fill();
+
+      // Label
+      const fs = Math.max(9, W*0.009);
+      ctx.font=`600 ${fs}px Inter,sans-serif`;
+      ctx.fillStyle=r.color+"cc";
+      ctx.textAlign="center";
+      ctx.fillText(r.label, r.end[0], r.end[1]-(10+pulse*3));
+    });
+
+    // Dubai dot
+    const dp=(Math.sin(t*2)+1)/2;
+    ctx.beginPath();ctx.arc(dubai[0],dubai[1],5+dp*12,0,Math.PI*2);
+    ctx.strokeStyle=`rgba(251,191,36,${0.5-dp*0.5})`; ctx.lineWidth=1.5; ctx.stroke();
+    ctx.beginPath();ctx.arc(dubai[0],dubai[1],5,0,Math.PI*2);
+    ctx.fillStyle="#fbbf24"; ctx.fill();
+    // Dubai label
+    const fs2 = Math.max(8, W*0.008);
+    ctx.font=`700 ${fs2}px Inter,sans-serif`;
+    ctx.fillStyle="#fbbf24cc"; ctx.textAlign="center";
+    ctx.fillText("DUBAI", dubai[0], dubai[1]+18);
+
+    requestAnimationFrame(draw);
+  }
+})();
 
 // Request any product
 function sendProductRequest(){
