@@ -913,6 +913,8 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 }
 .brand-pill.active{background:var(--text);color:#fff;border-color:var(--text);}
 .brand-pill:hover:not(.active){border-color:#888;color:var(--text);}
+.brand-pill-others{background:rgba(37,211,102,.08);border-color:rgba(37,211,102,.35);color:#1a9f50;text-decoration:none;}
+.brand-pill-others:hover{background:rgba(37,211,102,.16);border-color:#25d366;color:#16843f;}
 
 /* Product grid */
 .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
@@ -2249,7 +2251,7 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
     </div>
     <div class="cp-search-wrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" id="cpSearchInput" placeholder="Search by name, brand or model…" oninput="renderGrid()">
+      <input type="text" id="cpSearchInput" placeholder="Search by name, brand or model…" oninput="activeBrand='all';renderBrands();renderGrid()">
     </div>
     <div class="brand-filter" id="brandFilter"></div>
     <div class="req-form-box">
@@ -3062,9 +3064,32 @@ function getBrands(cat){
 
 function renderBrands(){
   const el = document.getElementById("brandFilter");
-  const brands = getBrands(activeCat);
-  el.innerHTML = brands.map(b=>`<button class="brand-pill${b.key===activeBrand?' active':''}" data-brand="${b.key}">${b.label}</button>`).join("");
-  el.querySelectorAll(".brand-pill").forEach(btn=>{
+  const si = document.getElementById("cpSearchInput");
+  const q = si ? si.value.trim().toLowerCase() : "";
+  const allBrands = getBrands(activeCat);
+
+  if(!q){
+    // No search — show all brands normally
+    el.innerHTML = allBrands.map(b=>`<button class="brand-pill${b.key===activeBrand?' active':''}" data-brand="${b.key}">${b.label}</button>`).join("");
+  } else {
+    // Search active — split brands into "has results" and "others"
+    const matchedBrandKeys = new Set();
+    let pool = activeCat === "all" ? PRODUCTS : PRODUCTS.filter(p=>p.cat===activeCat);
+    pool.filter(p=>p.name.toLowerCase().includes(q)||p.bl.toLowerCase().includes(q)||p.spec.toLowerCase().includes(q))
+        .forEach(p=>matchedBrandKeys.add(p.brand));
+
+    const availableBrands = allBrands.filter(b=>b.key==="all"||matchedBrandKeys.has(b.key));
+    const otherBrands = allBrands.filter(b=>b.key!=="all"&&!matchedBrandKeys.has(b.key));
+
+    let html = availableBrands.map(b=>`<button class="brand-pill${b.key===activeBrand?' active':''}" data-brand="${b.key}">${b.label}</button>`).join("");
+    if(otherBrands.length){
+      const otherMsg = `Hi MIRSAQ, I%27m looking for ${encodeURIComponent(q)} from: ${otherBrands.map(b=>b.label).join(", ")} — can you help?`;
+      html += `<a class="brand-pill brand-pill-others" href="https://wa.me/971552969386?text=${otherMsg}" target="_blank" rel="noopener">Others — Request via WhatsApp</a>`;
+    }
+    el.innerHTML = html;
+  }
+
+  el.querySelectorAll(".brand-pill[data-brand]").forEach(btn=>{
     btn.addEventListener("click",()=>{
       activeBrand = btn.dataset.brand;
       renderBrands();
@@ -3138,6 +3163,15 @@ function renderGrid(){
     </div>`;
   }
   document.getElementById("pgrid").innerHTML = html;
+}
+
+function handleSearch(q){
+  navSearch(q);
+  const si = document.getElementById("cpSearchInput");
+  if(si) si.value = q;
+  activeBrand = "all";
+  renderBrands();
+  renderGrid();
 }
 
 function navSearch(q){
