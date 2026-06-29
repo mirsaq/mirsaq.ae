@@ -353,6 +353,49 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:52px;
 .btn-wa svg{width:16px;height:16px;}
 @media(max-width:760px){.nav-links{display:none;}}
 
+/* ── NAV SEARCH ── */
+.nav-search{position:relative;display:flex;align-items:center;}
+.nav-search input{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  border-radius:999px;padding:7px 16px 7px 34px;
+  color:#fff;font-size:.82rem;width:180px;outline:none;
+  transition:width .3s,background .2s;
+}
+.nav-search input::placeholder{color:rgba(255,255,255,.4);}
+.nav-search input:focus{width:240px;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);}
+.nav-search>svg{position:absolute;left:11px;width:14px;height:14px;color:rgba(255,255,255,.4);pointer-events:none;}
+@media(max-width:900px){.nav-search{display:none;}}
+
+/* ── CATALOG SEARCH ── */
+.cp-search-wrap{position:relative;margin-bottom:20px;}
+.cp-search-wrap input{
+  width:100%;padding:12px 20px 12px 44px;
+  border:1.5px solid var(--border);border-radius:12px;
+  font-size:.95rem;background:var(--bg);color:var(--text);outline:none;
+  transition:border-color .2s;
+}
+.cp-search-wrap input:focus{border-color:var(--blue);}
+.cp-search-wrap>svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted);pointer-events:none;}
+
+/* ── OUT OF STOCK CARD ── */
+.oos-section{grid-column:1/-1;margin:8px 0;}
+.oos-header{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:12px;}
+.oos-card{
+  background:#fff5f5;border:1.5px solid #fecaca;border-radius:16px;
+  padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.oos-info{display:flex;align-items:center;gap:14px;}
+.oos-badge{background:#fee2e2;color:#dc2626;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px;white-space:nowrap;}
+.oos-name{font-weight:600;font-size:.95rem;color:var(--text);}
+.oos-sub{font-size:.8rem;color:var(--muted);margin-top:2px;}
+.oos-enq{
+  display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+  padding:10px 20px;border-radius:999px;background:#25d366;color:#fff;
+  font-size:.82rem;font-weight:600;flex-shrink:0;transition:filter .2s;
+}
+.oos-enq:hover{filter:brightness(1.08);}
+.oos-enq svg{width:15px;height:15px;}
+
 /* ── HERO — SPACE ── */
 .hero{
   position:relative;
@@ -1355,6 +1398,10 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
         <a href="#wholesale">Wholesale</a>
         <a href="#cta">Contact</a>
       </div>
+      <div class="nav-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search products…" id="navSearchInput" onkeydown="if(event.key==='Enter')navSearch(this.value)">
+      </div>
       <a class="btn-wa" href="https://wa.me/971526559790?text=Hi%20MIRSAQ%2C%20I%27d%20like%20to%20enquire" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4 8.94 8.94 0 0 0 4 17.66L3 21l3.41-.9a8.9 8.9 0 0 0 4.6 1.25h.01a8.94 8.94 0 0 0 6.58-15.04Z"/></svg>
         WhatsApp Us
@@ -2050,6 +2097,10 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
       </div>
       <button class="cp-close" onclick="closeCatPanel()" title="Close">✕</button>
     </div>
+    <div class="cp-search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="cpSearchInput" placeholder="Search by name, brand or model…" oninput="renderGrid()">
+    </div>
     <div class="brand-filter" id="brandFilter"></div>
     <div class="req-form-box">
       <div class="req-form-top">
@@ -2737,6 +2788,7 @@ const CATS = [
 
 let activeCat = "all";
 let activeBrand = "all";
+let activeSearch = "";
 
 function getBrands(cat){
   const ps = cat === "all" ? PRODUCTS : PRODUCTS.filter(p=>p.cat===cat);
@@ -2772,11 +2824,14 @@ function galNav(id,dir){
   galTo(id,(+g.dataset.i||0)+dir);
 }
 function renderGrid(){
+  const si = document.getElementById("cpSearchInput");
+  const q = si ? si.value.trim().toLowerCase() : "";
   let ps = PRODUCTS;
   if(activeCat !== "all") ps = ps.filter(p=>p.cat===activeCat);
   if(activeBrand !== "all") ps = ps.filter(p=>p.brand===activeBrand);
+  if(q) ps = ps.filter(p=>p.name.toLowerCase().includes(q)||p.bl.toLowerCase().includes(q)||p.spec.toLowerCase().includes(q));
   document.getElementById("resultCount").textContent = `${ps.length} product${ps.length!==1?'s':''}`;
-  document.getElementById("pgrid").innerHTML = ps.map(p=>{
+  let html = ps.map(p=>{
     const imgs = p.imgs||(p.img?[p.img]:[]);
     const id = pid(p);
     const fb = `this.onerror=null;this.style.display='none';if(!this.parentNode.querySelector('.img-fb')){var d=document.createElement('div');d.className='img-fb';d.innerHTML='<span>📦</span><small>${p.bl}</small>';this.parentNode.appendChild(d);}`;
@@ -2801,6 +2856,42 @@ function renderGrid(){
       </div>
     </div>`;
   }).join("");
+  if(q && ps.length===0){
+    const oosWa = `https://wa.me/971526559790?text=${encodeURIComponent(`Hi MIRSAQ, I'm looking for "${q}" — can you advise on availability and pricing?`)}`;
+    html += `<div class="oos-section">
+      <div class="oos-header">Not currently listed</div>
+      <div class="oos-card">
+        <div class="oos-info">
+          <span class="oos-badge">Out of Stock</span>
+          <div>
+            <div class="oos-name">${q}</div>
+            <div class="oos-sub">Currently unavailable — enquire for next availability</div>
+          </div>
+        </div>
+        <a class="oos-enq" href="${oosWa}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4 8.94 8.94 0 0 0 4 17.66L3 21l3.41-.9a8.9 8.9 0 0 0 4.6 1.25h.01a8.94 8.94 0 0 0 6.58-15.04Z"/></svg>
+          Enquire on WhatsApp
+        </a>
+      </div>
+    </div>`;
+  }
+  document.getElementById("pgrid").innerHTML = html;
+}
+
+function navSearch(q){
+  q = q.trim();
+  if(!q) return;
+  activeCat = "all";
+  activeBrand = "all";
+  document.getElementById("cpCatIcon").textContent = "";
+  document.getElementById("cpCatName").textContent = "Search Results";
+  const panel = document.getElementById("cat-panel");
+  panel.style.display = "block";
+  const si = document.getElementById("cpSearchInput");
+  if(si) si.value = q;
+  renderBrands();
+  renderGrid();
+  setTimeout(()=>panel.scrollIntoView({behavior:"smooth",block:"start"}),50);
 }
 
 function openCatPanel(cat, icon, name){
@@ -2808,11 +2899,12 @@ function openCatPanel(cat, icon, name){
   activeBrand = "all";
   document.getElementById("cpCatIcon").textContent = icon;
   document.getElementById("cpCatName").textContent = name;
+  const si = document.getElementById("cpSearchInput");
+  if(si) si.value = "";
   const panel = document.getElementById("cat-panel");
   panel.style.display = "block";
   renderBrands();
   renderGrid();
-  // scroll panel into view smoothly
   setTimeout(()=>panel.scrollIntoView({behavior:"smooth", block:"start"}), 50);
 }
 
