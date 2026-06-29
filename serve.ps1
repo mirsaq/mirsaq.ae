@@ -19,6 +19,7 @@ while ($listener.IsListening) {
             '.js'   { 'application/javascript' }
             '.png'  { 'image/png' }
             '.jpg'  { 'image/jpeg' }
+            '.jpeg' { 'image/jpeg' }
             '.svg'  { 'image/svg+xml' }
             '.ico'  { 'image/x-icon' }
             default { 'application/octet-stream' }
