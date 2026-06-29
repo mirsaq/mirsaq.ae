@@ -358,15 +358,38 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 .mobile-nav{
-  display:none;position:fixed;inset:0;top:80px;background:rgba(10,10,15,.97);
-  z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:32px;
+  display:none;position:fixed;top:60px;left:0;right:0;
+  height:calc(100vh - 60px);
+  background:rgba(10,10,15,.98);
+  z-index:200;flex-direction:column;align-items:stretch;justify-content:flex-start;
+  gap:0;padding:24px 20px 32px;overflow-y:auto;
 }
 .mobile-nav.open{display:flex;}
-.mobile-nav a{font-size:1.5rem;font-weight:700;color:rgba(255,255,255,.8);letter-spacing:-.01em;}
-.mobile-nav a:hover{color:#fff;}
+.mob-search-wrap{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;padding:11px 16px;margin-bottom:28px;
+}
+.mob-search-wrap svg{width:16px;height:16px;color:rgba(255,255,255,.4);flex-shrink:0;}
+.mob-search-wrap input{
+  background:none;border:none;outline:none;color:#fff;font-size:.95rem;
+  font-family:inherit;width:100%;
+}
+.mob-search-wrap input::placeholder{color:rgba(255,255,255,.35);}
+.mob-nav-links{display:flex;flex-direction:column;gap:4px;margin-bottom:24px;}
+.mobile-nav .mob-link{
+  font-size:1.1rem;font-weight:600;color:rgba(255,255,255,.75);
+  padding:14px 16px;border-radius:12px;transition:background .15s,color .15s;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.mobile-nav .mob-link::after{content:'→';font-size:.85rem;color:rgba(255,255,255,.3);}
+.mobile-nav .mob-link:hover{background:rgba(255,255,255,.07);color:#fff;}
+.mob-divider{height:1px;background:rgba(255,255,255,.08);margin:8px 0 20px;}
 .mobile-nav .mob-wa{
-  margin-top:8px;background:#25d366;color:#fff;padding:14px 32px;
-  border-radius:100px;font-size:1rem;font-weight:700;display:flex;align-items:center;gap:10px;
+  background:#25d366;color:#fff;padding:16px;
+  border-radius:14px;font-size:1rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  margin-top:4px;
 }
 @media(max-width:760px){
   nav{height:60px;padding:0 14px;}
@@ -1515,10 +1538,17 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
   </nav>
   <!-- Mobile nav overlay -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="#about" onclick="closeMobileNav()">About Us</a>
-    <a href="#" onclick="openCatPanel('all','','All Products');closeMobileNav();return false;">Browse Catalogue</a>
-    <a href="#wholesale" onclick="closeMobileNav()">Wholesale</a>
-    <a href="#cta" onclick="closeMobileNav()">Contact</a>
+    <div class="mob-search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="mobSearchInput" placeholder="Search products..." oninput="handleSearch(this.value)" autocomplete="off">
+    </div>
+    <div class="mob-nav-links">
+      <a class="mob-link" href="#about" onclick="closeMobileNav()">About Us</a>
+      <a class="mob-link" href="#" onclick="openCatPanel('all','','All Products');closeMobileNav();return false;">Browse Catalogue</a>
+      <a class="mob-link" href="#wholesale" onclick="closeMobileNav()">Wholesale</a>
+      <a class="mob-link" href="#cta" onclick="closeMobileNav()">Contact</a>
+    </div>
+    <div class="mob-divider"></div>
     <a class="mob-wa" href="https://wa.me/971552969386?text=Hi%20MIRSAQ%2C%20I%27d%20like%20to%20enquire" target="_blank" rel="noopener" onclick="closeMobileNav()">
       <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4 8.94 8.94 0 0 0 4 17.66L3 21l3.41-.9a8.9 8.9 0 0 0 4.6 1.25h.01a8.94 8.94 0 0 0 6.58-15.04Z"/></svg>
       WhatsApp Us
