@@ -3166,12 +3166,19 @@ function renderGrid(){
 }
 
 function handleSearch(q){
-  navSearch(q);
+  if(!q.trim()) return;
+  closeMobileNav();
   const si = document.getElementById("cpSearchInput");
   if(si) si.value = q;
+  activeCat = "all";
   activeBrand = "all";
+  document.getElementById("cpCatIcon").textContent = "";
+  document.getElementById("cpCatName").textContent = "Search Results";
+  const panel = document.getElementById("cat-panel");
+  panel.style.display = "block";
   renderBrands();
   renderGrid();
+  setTimeout(()=>panel.scrollIntoView({behavior:"smooth",block:"start"}),100);
 }
 
 function navSearch(q){
