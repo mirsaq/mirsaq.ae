@@ -369,9 +369,22 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
   border-radius:100px;font-size:1rem;font-weight:700;display:flex;align-items:center;gap:10px;
 }
 @media(max-width:760px){
+  nav{height:60px;padding:0 14px;}
   .nav-links{display:none;}
   .hamburger{display:flex;}
   .nav-search{display:none;}
+  .btn-wa{display:none;}
+  .brand img{height:38px;}
+  .brand{gap:8px;}
+  .brand-n{font-size:.95rem;letter-spacing:.02em;}
+  .brand-n small{font-size:.52rem;letter-spacing:.1em;}
+  .nav-r{gap:12px;}
+  .chat-popup{width:calc(100vw - 24px);right:12px;bottom:76px;}
+  .mobile-nav{top:60px;}
+  .float-wa{bottom:16px;right:16px;width:50px;height:50px;}
+  .float-wa svg{width:24px;height:24px;}
+  .about-grid{grid-template-columns:1fr !important;gap:32px !important;}
+  #about{padding:60px 0 !important;}
 }
 
 /* ── NAV SEARCH ── */
@@ -1524,12 +1537,12 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
 </section>
 
 <!-- ABOUT US -->
-<section id="about" style="background:#0a0a0f;padding:100px 0;">
+<section id="about" style="background:#0a0a0f;padding:80px 0;">
   <div class="wrap">
     <span class="section-label" style="color:rgba(255,255,255,.35);">Who we are</span>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:20px;">
+    <div class="about-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:20px;">
       <div>
-        <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.03em;color:#fff;margin-bottom:24px;">Dubai's Leading Electronics Wholesale Exporter</h2>
+        <h2 style="font-size:clamp(1.4rem,4vw,3rem);font-weight:700;letter-spacing:-.03em;color:#fff;margin-bottom:24px;">Dubai's Leading Electronics Wholesale Exporter</h2>
         <p style="font-size:.95rem;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:20px;">MIRSAQ General Trading LLC is a Dubai-based company specialising in the retail and wholesale export of consumer electronics. We deal in virtually every major brand — smartphones, laptops, tablets, gaming consoles, wearables, audio equipment, and home appliances.</p>
         <p style="font-size:.95rem;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:32px;">Operating from the heart of Dubai — one of the world's most connected trade hubs — we supply genuine, sealed, warranty-backed products to distributors, retailers, and importers across Europe, CIS, Africa, Asia, USA, and Australia.</p>
         <div style="display:flex;gap:40px;flex-wrap:wrap;">
@@ -2641,7 +2654,7 @@ function closeMobileNav(){
 function toggleChat(){
   document.getElementById('chatPopup').classList.toggle('open');
 }
-setTimeout(()=>{ const p=document.getElementById('chatPopup'); if(p&&!p.classList.contains('open')) p.classList.add('open'); },4000);
+setTimeout(()=>{ if(window.innerWidth>760){ const p=document.getElementById('chatPopup'); if(p&&!p.classList.contains('open')) p.classList.add('open'); }},4000);
 
 /* ── NAV SCROLL ── */
 window.addEventListener('scroll',()=>{
