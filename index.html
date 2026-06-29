@@ -336,7 +336,7 @@ header.scrolled{
 nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
     display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;gap:14px;}
-.brand img{width:auto;height:64px;mix-blend-mode:screen;border-radius:6px;}
+.brand img{width:auto;height:64px;border-radius:6px;}
 .brand-n{font-size:1.55rem;font-weight:800;letter-spacing:.04em;color:#fff;line-height:1.1;font-family:'Montserrat','Inter',system-ui,sans-serif;white-space:nowrap;}
 .brand-n small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.18em;color:rgba(255,255,255,.5);text-transform:uppercase;margin-top:3px;font-family:'Inter',system-ui,sans-serif;white-space:nowrap;}
 .nav-r{display:flex;align-items:center;gap:20px;}
@@ -351,7 +351,28 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 }
 .btn-wa:hover{filter:brightness(1.08);}
 .btn-wa svg{width:16px;height:16px;}
-@media(max-width:760px){.nav-links{display:none;}}
+/* ── HAMBURGER ── */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:201;}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-nav{
+  display:none;position:fixed;inset:0;top:80px;background:rgba(10,10,15,.97);
+  z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:32px;
+}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{font-size:1.5rem;font-weight:700;color:rgba(255,255,255,.8);letter-spacing:-.01em;}
+.mobile-nav a:hover{color:#fff;}
+.mobile-nav .mob-wa{
+  margin-top:8px;background:#25d366;color:#fff;padding:14px 32px;
+  border-radius:100px;font-size:1rem;font-weight:700;display:flex;align-items:center;gap:10px;
+}
+@media(max-width:760px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .nav-search{display:none;}
+}
 
 /* ── NAV SEARCH ── */
 .nav-search{position:relative;display:flex;align-items:center;}
@@ -1463,8 +1484,22 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4 8.94 8.94 0 0 0 4 17.66L3 21l3.41-.9a8.9 8.9 0 0 0 4.6 1.25h.01a8.94 8.94 0 0 0 6.58-15.04Z"/></svg>
         WhatsApp Us
       </a>
+      <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about" onclick="closeMobileNav()">About Us</a>
+    <a href="#" onclick="openCatPanel('all','','All Products');closeMobileNav();return false;">Browse Catalogue</a>
+    <a href="#wholesale" onclick="closeMobileNav()">Wholesale</a>
+    <a href="#cta" onclick="closeMobileNav()">Contact</a>
+    <a class="mob-wa" href="https://wa.me/971552969386?text=Hi%20MIRSAQ%2C%20I%27d%20like%20to%20enquire" target="_blank" rel="noopener" onclick="closeMobileNav()">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4 8.94 8.94 0 0 0 4 17.66L3 21l3.41-.9a8.9 8.9 0 0 0 4.6 1.25h.01a8.94 8.94 0 0 0 6.58-15.04Z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
 </header>
 
 <!-- HERO -->
@@ -2508,7 +2543,7 @@ function sendMail(e){
             <span style="font-size:.72rem;color:rgba(255,255,255,.45);letter-spacing:.12em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;">General Trading LLC</span>
           </div>
         </div>
-        <p>Premium electronics retail and wholesale. Based in Dubai, UAE.</p>
+        <p>B2B electronics wholesale exporter. Based in Dubai, UAE.</p>
       </div>
       <div class="fcol">
         <h5>Categories</h5>
@@ -2518,7 +2553,7 @@ function sendMail(e){
       </div>
       <div class="fcol">
         <h5>Business</h5>
-        <a href="#cta">Retail</a><a href="#cta">Wholesale</a><a href="#cta">Contact</a>
+        <a href="#wholesale">Wholesale</a><a href="#cta">Contact</a>
       </div>
       <div class="fcol">
         <h5>Reach us</h5>
@@ -2588,6 +2623,20 @@ function sendMail(e){
 </button>
 
 <script>
+/* ── MOBILE NAV ── */
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');
+  const btn=document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+  document.body.style.overflow=nav.classList.contains('open')?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow='';
+}
+
 /* ── LIVE CHAT ── */
 function toggleChat(){
   document.getElementById('chatPopup').classList.toggle('open');
