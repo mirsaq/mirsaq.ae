@@ -1130,7 +1130,21 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
 .contact-card-icon.mail{background:rgba(0,102,204,.2);}
-.contact-card-icon.insta{background:linear-gradient(135deg,rgba(253,88,73,.2),rgba(188,42,141,.2));}
+.contact-card-icon.insta{background:linear-gradient(135deg,rgba(253,88,73,.3),rgba(188,42,141,.3));}
+.contact-card.insta-card{
+  flex-direction:column;align-items:flex-start;gap:14px;
+  background:linear-gradient(135deg,rgba(253,88,73,.08),rgba(188,42,141,.1));
+  border:1.5px solid rgba(188,42,141,.35);
+  padding:28px 28px 24px;
+  margin-top:8px;
+}
+.contact-card.insta-card:hover{background:linear-gradient(135deg,rgba(253,88,73,.15),rgba(188,42,141,.18));border-color:rgba(188,42,141,.6);transform:translateY(-3px);}
+.insta-card .contact-card-icon{width:56px;height:56px;border-radius:16px;}
+.insta-card .contact-card-icon svg{width:28px;height:28px;}
+.insta-card .contact-card-label{font-size:.68rem;letter-spacing:.12em;background:linear-gradient(90deg,#fd5849,#bc2a8d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.insta-card .contact-card-value{font-size:1.15rem;font-weight:700;}
+.insta-card .contact-card-sub{font-size:.82rem;color:rgba(255,255,255,.5);margin-top:2px;}
+.insta-followers{font-size:.75rem;color:rgba(255,255,255,.3);margin-top:6px;letter-spacing:.04em;}
 .contact-card-info{display:flex;flex-direction:column;gap:3px;}
 .contact-card-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;}
 .contact-card-value{font-size:.95rem;color:#fff;font-weight:500;}
@@ -2290,17 +2304,24 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
             <span class="contact-card-sub">For bulk orders and pricing</span>
           </div>
         </a>
-        <a class="contact-card" href="https://www.instagram.com/mirsaq_ae?igsh=MWppbWpnNXIwZWVieA==" target="_blank" rel="noopener">
-          <div class="contact-card-icon insta">
-            <svg viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" stroke-width="1.8" width="24" height="24">
-              <defs><linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#fd5849"/><stop offset="100%" stop-color="#bc2a8d"/></linearGradient></defs>
-              <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="#fd5849" stroke="none"/>
-            </svg>
+        <a class="contact-card insta-card" href="https://www.instagram.com/mirsaq_ae?igsh=MWppbWpnNXIwZWVieA==" target="_blank" rel="noopener">
+          <div style="display:flex;align-items:center;gap:16px;width:100%;">
+            <div class="contact-card-icon insta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" stroke-width="1.8" width="28" height="28">
+                <defs><linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#fd5849"/><stop offset="100%" stop-color="#bc2a8d"/></linearGradient></defs>
+                <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="#fd5849" stroke="none"/>
+              </svg>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Instagram</span>
+              <span class="contact-card-value">@mirsaq_ae</span>
+              <span class="contact-card-sub">New arrivals · Deals · Behind the scenes</span>
+            </div>
           </div>
-          <div class="contact-card-info">
-            <span class="contact-card-label">Instagram</span>
-            <span class="contact-card-value">@mirsaq_ae</span>
-            <span class="contact-card-sub">Follow us for updates and products</span>
+          <div style="width:100%;height:1px;background:linear-gradient(90deg,rgba(253,88,73,.3),rgba(188,42,141,.3),transparent);"></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+            <span class="insta-followers">Stay updated with our latest products</span>
+            <span style="font-size:.75rem;font-weight:600;background:linear-gradient(90deg,#fd5849,#bc2a8d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Follow →</span>
           </div>
         </a>
       </div>
