@@ -137,7 +137,18 @@
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\" -File | Where-Object { $_.Name -match \"^\\(Dyson_Supersonic|Garmin_Forerunner_9|Garmin_Forerunner_265S|iPad_Air_13|MacBook_Air_15\\)\" } | Select-Object Name)",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\" -File | Where-Object { $_.Name -match \"^\\(Dyson_Supersonic|Garmin_Forerunner_9|Garmin_Forerunner_265S\\)\" } | ForEach-Object { $_.FullName })",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\" -File | Where-Object { $_.Name -match \"^\\(og-image|logo\\)\" } | Select-Object Name)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "WebFetch(domain:mirsaq-ae-f4hg.vercel.app)",
+      "Bash(git remote *)",
+      "Bash(magick --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(node -e \"const s=require\\('fs'\\).readdirSync\\('images'\\).filter\\(f=>f.endsWith\\('.jpeg'\\)||f.endsWith\\('.jpg'\\)||f.endsWith\\('.png'\\)\\); console.log\\(s.length,'images'\\); const total=s.reduce\\(\\(a,f\\)=>{try{return a+require\\('fs'\\).statSync\\('images/'+f\\).size}catch\\(e\\){return a}},0\\); console.log\\(Math.round\\(total/1024/1024\\)+'MB total'\\);\")",
+      "Bash(npm list *)",
+      "Bash(node compress.mjs)",
+      "Bash(node -e ' *)",
+      "Bash(git checkout *)"
     ]
   }
 }
