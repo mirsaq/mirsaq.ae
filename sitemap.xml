@@ -301,6 +301,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Accessories hub -->
+  <url>
+    <loc>https://mirsaq.ae/accessories-wholesale-dubai</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Group A: Russia brand pages (Russian language) -->
   <url>
     <loc>https://mirsaq.ae/iphone-wholesale-russia</loc>
