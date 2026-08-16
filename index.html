@@ -75,26 +75,66 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://mirsaq.ae/#organization",
   "name": "MIRSAQ General Trading LLC",
-  "alternateName": ["MIRSAQ", "Mirsaq Trading", "Mirsaq Electronics", "MIRSAQ Dubai"],
+  "legalName": "MIRSAQ General Trading LLC",
+  "alternateName": ["MIRSAQ", "Mirsaq Trading", "Mirsaq Electronics", "MIRSAQ Dubai", "ميرساق للتجارة العامة"],
   "url": "https://mirsaq.ae",
-  "logo": "logo-p-transparent.png",
-  "description": "Dubai-based B2B electronics wholesale exporter. Supplying genuine sealed products across virtually every major brand — smartphones, tablets, laptops, gaming consoles, wearables and audio — to bulk buyers in CIS countries, Africa, Europe, Asia and worldwide. UAE licensed trading company.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://mirsaq.ae/logo-p-transparent.png"
+  },
+  "description": "MIRSAQ General Trading LLC is a licensed UAE trading company headquartered in Dubai. We are a B2B electronics wholesale exporter supplying genuine, factory-sealed consumer electronics — Apple iPhone, Samsung, Garmin, Dyson, JBL, PlayStation and more — in bulk quantities to importers, distributors and retailers in CIS countries, Africa, Europe, Asia and worldwide.",
+  "foundingDate": "2022",
   "foundingLocation": {
     "@type": "Place",
     "name": "Dubai, United Arab Emirates"
   },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dubai",
+    "addressRegion": "Dubai",
+    "addressCountry": "AE"
+  },
   "areaServed": [
-    "AE","SA","KW","QA","BH","OM","GB","US","DE","FR","IT","ES","NL","PL","TR",
-    "KZ","RU","UA","UZ","GE","AZ","AM","KG","TJ","TM","MD","BY","LV","LT","EE",
-    "NG","GH","KE","ET","ZA","EG","MA","TZ","UG","SN","CM","CI",
-    "IN","PK","BD","LK","NP","MM","TH","MY","SG","ID","PH","VN"
+    {"@type": "Country", "name": "United Arab Emirates"},
+    {"@type": "Country", "name": "Russia"},
+    {"@type": "Country", "name": "Kazakhstan"},
+    {"@type": "Country", "name": "Uzbekistan"},
+    {"@type": "Country", "name": "Azerbaijan"},
+    {"@type": "Country", "name": "Armenia"},
+    {"@type": "Country", "name": "Belarus"},
+    {"@type": "Country", "name": "Ukraine"},
+    {"@type": "Country", "name": "Kyrgyzstan"},
+    {"@type": "Country", "name": "Tajikistan"},
+    {"@type": "Country", "name": "Georgia"},
+    {"@type": "Country", "name": "Maldives"},
+    {"@type": "Country", "name": "Nigeria"},
+    {"@type": "Country", "name": "Ghana"},
+    {"@type": "Country", "name": "Kenya"},
+    {"@type": "Country", "name": "Saudi Arabia"},
+    {"@type": "Country", "name": "United Kingdom"},
+    {"@type": "Country", "name": "Germany"},
+    {"@type": "Country", "name": "France"}
   ],
   "knowsAbout": [
-    "Electronics Wholesale Export", "B2B Electronics Supply", "Bulk iPhone Supply",
-    "Samsung Galaxy Wholesale", "Consumer Electronics Trading", "International Electronics Export",
-    "CIS Electronics Supply", "Wholesale Gaming Consoles", "Bulk Laptop Supply"
+    "Electronics Wholesale Export", "B2B Electronics Supply", "iPhone wholesale Dubai",
+    "Samsung wholesale UAE", "Garmin watches wholesale", "Dyson wholesale exporter",
+    "JBL audio wholesale", "PlayStation wholesale", "Consumer electronics export Dubai",
+    "CIS electronics supplier", "Africa electronics wholesale", "Maldives electronics wholesale"
   ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "MIRSAQ Electronics Wholesale Catalog",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "iPhone wholesale (all models)"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Samsung Galaxy wholesale"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Garmin watches wholesale"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Dyson products wholesale"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "JBL audio wholesale"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "PlayStation 5 wholesale"}}
+    ]
+  },
   "contactPoint": [
     {
       "@type": "ContactPoint",
@@ -110,15 +150,22 @@
       "contactType": "customer support",
       "availableLanguage": ["English", "Arabic", "Russian"],
       "areaServed": "Worldwide"
+    },
+    {
+      "@type": "ContactPoint",
+      "email": "info@mirsaq.ae",
+      "contactType": "sales"
     }
   ],
   "sameAs": [
-    "https://wa.me/971526559790",
-    "https://wa.me/971552969386",
+    "https://mirsaq.ae/about",
     "https://www.linkedin.com/company/mirsaqgeneraltradingllc",
     "https://www.instagram.com/mirsaq.ae",
-    "https://www.facebook.com/people/Mirsaqae/61592278079524/"
-  ]
+    "https://www.facebook.com/people/Mirsaqae/61592278079524/",
+    "https://wa.me/971526559790",
+    "https://wa.me/971552969386"
+  ],
+  "slogan": "Genuine electronics, wholesale prices, worldwide delivery from Dubai."
 }
 </script>
 
