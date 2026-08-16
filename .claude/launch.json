@@ -12,6 +12,12 @@
       "runtimeExecutable": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
       "runtimeArgs": ["-ExecutionPolicy", "Bypass", "-File", "serve-profile.ps1"],
       "port": 3001
+    },
+    {
+      "name": "inventory-system",
+      "runtimeExecutable": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "runtimeArgs": ["-ExecutionPolicy", "Bypass", "-Command", "cd '..\\inventory-system'; npm run dev -- -p 3002"],
+      "port": 3002
     }
   ]
 }

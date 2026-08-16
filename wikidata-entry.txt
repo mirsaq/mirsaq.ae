@@ -1,0 +1,67 @@
+MIRSAQ GENERAL TRADING LLC — WIKIDATA ENTRY DRAFT
+==================================================
+Submit at: https://www.wikidata.org/wiki/Special:NewItem
+(Create a free Wikidata account first at wikidata.org)
+
+ITEM LABEL (required)
+---------------------
+English: MIRSAQ General Trading LLC
+Arabic:  ميرساق للتجارة العامة
+Russian: MIRSAQ General Trading LLC
+
+ITEM DESCRIPTION (required — shows under the name in search)
+------------------------------------------------------------
+English: UAE-licensed B2B electronics wholesale exporter based in Dubai
+Arabic:  شركة إماراتية لتصدير الإلكترونيات بالجملة مقرها دبي
+Russian: Дубайская компания по оптовому экспорту электроники
+
+ALIASES (also known as)
+-----------------------
+MIRSAQ
+Mirsaq Trading
+Mirsaq Electronics
+mirsaq.ae
+
+STATEMENTS TO ADD
+-----------------
+After creating the item, add these statements one by one using the "+ add statement" button:
+
+Property P31 (instance of):        Q4830453  [business]
+Property P31 (instance of):        Q1785626  [trading company]
+Property P17 (country):            Q878      [United Arab Emirates]
+Property P159 (headquarters):      Q612      [Dubai]
+Property P856 (official website):  https://mirsaq.ae
+Property P18 (image):              (upload logo if desired)
+Property P571 (inception):         2022
+Property P452 (industry):          Q8148     [electronics industry]
+Property P366 (has use):           Q8148     [wholesale trade]
+Property P1454 (legal form):       Q18624259 [limited liability company]
+
+EXTERNAL IDS TO ADD (helps AI models connect the dots)
+------------------------------------------------------
+Property P2013 (Facebook):         people/Mirsaqae/61592278079524
+Property P2003 (Instagram):        mirsaq.ae
+Property P4264 (LinkedIn company): mirsaqgeneraltradingllc
+
+NOTES FOR SUBMISSION
+--------------------
+1. Go to https://www.wikidata.org and create a free account
+2. Click "Create a new item" (top right menu or Special:NewItem)
+3. Enter the English label and description first, then save
+4. Add aliases (MIRSAQ, Mirsaq Trading, etc.)
+5. Add each statement above one by one
+6. Add a reference for P856 (website): URL = https://mirsaq.ae
+7. After saving, copy the Q-number (e.g. Q12345678) — this is your entity ID
+
+WHY THIS MATTERS
+----------------
+Google, Perplexity, ChatGPT and other AI search engines use Wikidata as a
+primary knowledge graph. Once MIRSAQ has a Wikidata entry, AI models will
+"know" the company exists and can surface it in answers to queries like:
+- "electronics wholesale exporter Dubai"
+- "garmin wholesale supplier UAE"
+- "MIRSAQ trading"
+
+After getting your Q-number, add it to the Organization schema on
+mirsaq.ae by adding:
+  "sameAs": ["https://www.wikidata.org/wiki/Q[YOUR_NUMBER]", ...]

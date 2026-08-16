@@ -398,13 +398,13 @@
 <link rel="apple-touch-icon" href="logo-p-transparent.png">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <!-- CDN preconnects for performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
 <link rel="dns-prefetch" href="https://store.storeimages.cdn-apple.com">
 <link rel="dns-prefetch" href="https://images.samsung.com">
 <link rel="dns-prefetch" href="https://res.garmin.com">
 <link rel="dns-prefetch" href="https://gmedia.playstation.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --bg:#fff;
@@ -418,7 +418,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
      line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 a{color:inherit;text-decoration:none;}
 img{display:block;max-width:100%;}
@@ -442,8 +442,8 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 .brand{display:flex;align-items:center;gap:14px;}
 .brand img{width:auto;height:64px;border-radius:6px;}
 .nav-logo{height:64px;width:auto;}
-.brand-n{font-size:1.55rem;font-weight:800;letter-spacing:.04em;color:#fff;line-height:1.1;font-family:'Montserrat','Inter',system-ui,sans-serif;white-space:nowrap;}
-.brand-n small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.18em;color:rgba(255,255,255,.5);text-transform:uppercase;margin-top:3px;font-family:'Inter',system-ui,sans-serif;white-space:nowrap;}
+.brand-n{font-size:1.55rem;font-weight:800;letter-spacing:.04em;color:#fff;line-height:1.1;font-family:system-ui,'Segoe UI',system-ui,-apple-system,system-ui,sans-serif;white-space:nowrap;}
+.brand-n small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.18em;color:rgba(255,255,255,.5);text-transform:uppercase;margin-top:3px;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;white-space:nowrap;}
 .nav-r{display:flex;align-items:center;gap:20px;}
 .nav-links{display:flex;gap:24px;}
 .nav-links a{font-size:.84rem;color:rgba(255,255,255,.6);font-weight:500;transition:color .15s;}
@@ -541,7 +541,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 
 /* ── OUT OF STOCK CARD ── */
 .oos-section{grid-column:1/-1;margin:8px 0;}
-.oos-header{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:12px;}
+.oos-header{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-family:monospace,monospace;margin-bottom:12px;}
 .oos-card{
   background:#fff5f5;border:1.5px solid #fecaca;border-radius:16px;
   padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
@@ -568,7 +568,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 #star-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
 .hero-text{position:relative;z-index:5;text-align:center;max-width:780px;margin:0 auto;padding:100px 24px 60px;}
 .hero-tag{
-  display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.7rem;
+  display:inline-block;font-family:monospace,monospace;font-size:.7rem;
   letter-spacing:.14em;text-transform:uppercase;color:rgba(100,180,255,.7);
   margin-bottom:22px;border:1px solid rgba(100,180,255,.2);padding:6px 16px;border-radius:100px;
   background:rgba(100,180,255,.06);
@@ -766,7 +766,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
   pointer-events:none;
 }
 /* typography */
-.bc-kicker{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.14em;
+.bc-kicker{font-family:monospace,monospace;font-size:.66rem;letter-spacing:.14em;
            text-transform:uppercase;margin-bottom:16px;display:block;font-weight:500;}
 .bc-night .bc-kicker,.bc-blue .bc-kicker{color:rgba(255,255,255,.38);}
 .bc-green .bc-kicker{color:#15803d;}
@@ -787,7 +787,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 .bc-green .bc-body{color:#166534;opacity:.7;}
 .bc-warm .bc-body{color:#78350f;opacity:.7;}
 .bc-surface .bc-body{color:#6e6e73;}
-.bc-sub{font-size:.76rem;font-family:'JetBrains Mono',monospace;margin-top:6px;display:block;}
+.bc-sub{font-size:.76rem;font-family:monospace,monospace;margin-top:6px;display:block;}
 .bc-night .bc-sub{color:rgba(255,255,255,.3);}
 .bc-surface .bc-sub{color:#6e6e73;}
 /* WA card inside bento */
@@ -806,7 +806,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 
 /* ── BRANDS MARQUEE ── */
 .brands-section{padding:48px 0;border-bottom:1px solid #e4eaf6;overflow:hidden;background:#f0f4ff;}
-.brands-label{text-align:center;font-family:'JetBrains Mono',monospace;font-size:.68rem;
+.brands-label{text-align:center;font-family:monospace,monospace;font-size:.68rem;
               letter-spacing:.14em;text-transform:uppercase;color:#8899bb;margin-bottom:28px;}
 .marquee-outer{overflow:hidden;mask:linear-gradient(90deg,transparent,#f0f4ff 10%,#f0f4ff 90%,transparent);}
 .marquee-row{display:flex;gap:0;animation:mq 28s linear infinite;width:max-content;}
@@ -831,7 +831,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 .trust-header .section-label{
   display:block;text-align:center;margin-bottom:12px;
   color:rgba(56,189,248,.7);letter-spacing:.14em;font-size:.7rem;
-  font-family:'JetBrains Mono',monospace;text-transform:uppercase;
+  font-family:monospace,monospace;text-transform:uppercase;
 }
 .trust-header h2{
   font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;
@@ -983,7 +983,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 /* ── CATALOG SECTION ── */
 .cat-section{padding:80px 0 120px;background:var(--bg);}
 .cat-section-head{margin-bottom:48px;}
-.section-label{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.12em;
+.section-label{font-family:monospace,monospace;font-size:.68rem;letter-spacing:.12em;
                text-transform:uppercase;color:var(--muted);margin-bottom:10px;display:block;}
 .cat-section-head h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;letter-spacing:-.03em;color:var(--text);}
 
@@ -1039,7 +1039,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 .pphoto img{width:100%;height:100%;object-fit:contain;padding:16px;transition:transform .4s ease;}
 .img-fb{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#f5f5f7,#e8e8ed);color:#86868b;}
 .img-fb span{font-size:2.5rem;}
-.img-fb small{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;}
+.img-fb small{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:monospace,monospace;}
 .pcard:hover .pphoto img{transform:scale(1.06);}
 /* Gallery carousel */
 .pgallery{display:flex;width:100%;height:100%;transition:transform .32s ease;will-change:transform;}
@@ -1061,7 +1061,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 .pbadge{
   position:absolute;top:10px;left:10px;
   background:rgba(0,0,0,.06);color:var(--muted);
-  font-family:'JetBrains Mono',monospace;font-size:.6rem;font-weight:500;
+  font-family:monospace,monospace;font-size:.6rem;font-weight:500;
   padding:3px 8px;border-radius:999px;letter-spacing:.05em;text-transform:uppercase;
 }
 .pinfo{padding:14px;flex:1;display:flex;flex-direction:column;gap:6px;}
@@ -1135,7 +1135,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 .req-input{
   display:flex;flex-direction:column;gap:5px;
 }
-.req-input label{font-size:.7rem;font-family:'JetBrains Mono',monospace;letter-spacing:.1em;
+.req-input label{font-size:.7rem;font-family:monospace,monospace;letter-spacing:.1em;
                  text-transform:uppercase;color:var(--muted);font-weight:500;}
 .req-input input{
   padding:10px 14px;border-radius:10px;border:1px solid var(--border);
@@ -1204,12 +1204,12 @@ nav{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:80px;
 .tavatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;color:#fff;flex-shrink:0;}
 .tperson{display:flex;align-items:center;gap:12px;margin-top:4px;}
 .tname{font-size:.84rem;font-weight:700;color:#1d1d1f;}
-.tmeta{font-size:.7rem;color:#6e6e73;font-family:'JetBrains Mono',monospace;}
+.tmeta{font-size:.7rem;color:#6e6e73;font-family:monospace,monospace;}
 .tverified{display:inline-flex;align-items:center;gap:4px;font-size:.63rem;font-weight:600;color:#0066cc;background:rgba(0,102,204,.08);padding:2px 7px;border-radius:20px;margin-top:2px;}
 .tcard.featured .tverified{color:#93c5fd;background:rgba(147,197,253,.15);}
 .trating-bar{display:flex;align-items:center;gap:10px;margin-top:8px;padding-top:20px;border-top:1px solid #e4eaf6;}
 .trating-bar strong{font-size:1.8rem;font-weight:800;color:#1d1d1f;letter-spacing:-.04em;}
-.trating-info small{display:block;font-size:.68rem;color:#6e6e73;font-family:'JetBrains Mono',monospace;}
+.trating-info small{display:block;font-size:.68rem;color:#6e6e73;font-family:monospace,monospace;}
 @media(max-width:900px){.testi-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:600px){.testi-grid{grid-template-columns:1fr;}.testi-section{padding:52px 0;}.tcard{padding:20px;}}
 
@@ -1261,13 +1261,13 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
 .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px;margin-bottom:40px;}
 .foot-brand .brand-n{color:#fff;}
 .foot-brand p{font-size:.84rem;color:#6e6e73;margin-top:10px;max-width:200px;line-height:1.6;}
-.fcol h5{font-size:.7rem;font-family:'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;
+.fcol h5{font-size:.7rem;font-family:monospace,monospace;letter-spacing:.1em;text-transform:uppercase;
           color:#6e6e73;margin-bottom:14px;font-weight:500;}
 .fcol a,.fcol span{display:block;font-size:.86rem;color:#6e6e73;margin-bottom:8px;transition:color .15s;}
 .fcol a:hover{color:#fff;}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;
              display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-.foot-bottom span{font-size:.78rem;color:#6e6e73;font-family:'JetBrains Mono',monospace;}
+.foot-bottom span{font-size:.78rem;color:#6e6e73;font-family:monospace,monospace;}
 
 /* ── MAP SECTION ── */
 .map-section{background:#1d1d1f;padding:80px 0;}
@@ -1335,7 +1335,7 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
 .insta-card .contact-card-sub{font-size:.82rem;color:rgba(255,255,255,.5);margin-top:2px;}
 .insta-followers{font-size:.75rem;color:rgba(255,255,255,.3);margin-top:6px;letter-spacing:.04em;}
 .contact-card-info{display:flex;flex-direction:column;gap:3px;}
-.contact-card-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;}
+.contact-card-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:monospace,monospace;}
 .contact-card-value{font-size:.95rem;color:#fff;font-weight:500;}
 .contact-card-sub{font-size:.78rem;color:rgba(255,255,255,.4);}
 /* email form */
@@ -1343,7 +1343,7 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
 .contact-form-wrap h4{font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:6px;}
 .contact-form-wrap p{font-size:.82rem;color:rgba(255,255,255,.4);margin-bottom:24px;}
 .cf-field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
-.cf-field label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;}
+.cf-field label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:monospace,monospace;}
 .cf-field input,.cf-field select,.cf-field textarea{
   background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
   border-radius:10px;padding:12px 14px;color:#fff;font-size:.88rem;
@@ -1712,29 +1712,29 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
         <div style="display:flex;gap:40px;flex-wrap:wrap;">
           <div>
             <div style="font-size:2rem;font-weight:700;color:#fff;">6+</div>
-            <div style="font-size:.78rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;font-family:'JetBrains Mono',monospace;">Export Regions</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;font-family:monospace,monospace;">Export Regions</div>
           </div>
           <div>
             <div style="font-size:2rem;font-weight:700;color:#fff;">20+</div>
-            <div style="font-size:.78rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;font-family:'JetBrains Mono',monospace;">Top Brands</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;font-family:monospace,monospace;">Top Brands</div>
           </div>
           <div>
             <div style="font-size:2rem;font-weight:700;color:#fff;">100%</div>
-            <div style="font-size:.78rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;font-family:'JetBrains Mono',monospace;">Genuine Products</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em;font-family:monospace,monospace;">Genuine Products</div>
           </div>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;">
         <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 28px;">
-          <div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;margin-bottom:8px;">Our Mission</div>
+          <div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:monospace,monospace;margin-bottom:8px;">Our Mission</div>
           <p style="font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.7;margin:0;">To be the most trusted electronics trading partner in the Middle East — delivering genuine products at competitive wholesale prices, fast and reliably, to every corner of the world.</p>
         </div>
         <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 28px;">
-          <div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;margin-bottom:8px;">Why Dubai</div>
+          <div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:monospace,monospace;margin-bottom:8px;">Why Dubai</div>
           <p style="font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.7;margin:0;">Dubai is the world's re-export capital. Our strategic location gives us direct access to global supply chains, enabling fast shipping and competitive pricing for buyers worldwide.</p>
         </div>
         <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 28px;">
-          <div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;margin-bottom:8px;">Our Promise</div>
+          <div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:monospace,monospace;margin-bottom:8px;">Our Promise</div>
           <p style="font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.7;margin:0;">Every product is sealed, genuine, and covered by manufacturer warranty. No grey market. No compromises.</p>
         </div>
       </div>
@@ -2505,7 +2505,7 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
       <div class="tcard rev" style="justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#f0f4ff,#e8f0ff);gap:8px;border-color:#d0dcf5;">
         <div class="tstar" style="font-size:1.3rem;">★★★★★</div>
         <div style="font-size:3rem;font-weight:800;letter-spacing:-.04em;color:#1d1d1f;line-height:1;">4.9</div>
-        <div style="font-size:.78rem;color:#6e6e73;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;">AVERAGE RATING</div>
+        <div style="font-size:.78rem;color:#6e6e73;font-family:monospace,monospace;letter-spacing:.06em;">AVERAGE RATING</div>
         <div style="font-size:.74rem;color:#6e6e73;margin-top:10px;line-height:1.6;">Based on verified orders<br>from 20+ countries worldwide</div>
         <a href="https://wa.me/971552969386?text=Hi%20MIRSAQ%2C%20I%27d%20like%20to%20enquire" target="_blank" rel="noopener" style="margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:10px 22px;border-radius:100px;font-size:.82rem;font-weight:600;text-decoration:none;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -2595,7 +2595,7 @@ footer{background:#1d1d1f;padding:56px 0 32px;}
 <section style="background:#0a0a0f;padding:80px 0;display:none;">
   <div class="wrap">
     <div class="rev" style="margin-bottom:40px;">
-      <span style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#34d399;font-family:'JetBrains Mono',monospace;">Garmin · CIS Markets</span>
+      <span style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#34d399;font-family:monospace,monospace;">Garmin · CIS Markets</span>
       <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:#fff;margin:12px 0 10px;line-height:1.2;">Garmin Watches by CIS Country</h2>
       <p style="color:rgba(255,255,255,.5);max-width:600px;font-size:.95rem;line-height:1.7;">Оптовые поставки часов Garmin из Дубая во все страны СНГ. Fenix 8, Epix Pro, Instinct 2 Solar — 100% оригинал, прямая доставка.</p>
     </div>
@@ -2883,7 +2883,7 @@ function sendMail(e){
           <img src="logo-p-transparent.png" alt="MIRSAQ" style="height:56px;width:auto;">
           <div style="display:flex;flex-direction:column;gap:2px;">
             <span style="font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:.02em;">MIRSAQ</span>
-            <span style="font-size:.72rem;color:rgba(255,255,255,.45);letter-spacing:.12em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;">General Trading LLC</span>
+            <span style="font-size:.72rem;color:rgba(255,255,255,.45);letter-spacing:.12em;text-transform:uppercase;font-family:monospace,monospace;">General Trading LLC</span>
           </div>
         </div>
         <p>Electronics retail &amp; wholesale export. Based in Dubai, UAE.</p>
