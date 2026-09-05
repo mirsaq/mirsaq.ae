@@ -1,19 +1,17 @@
 # MIRSAQ General Trading LLC
 
 ## Who we are
-MIRSAQ General Trading LLC is a licensed electronics wholesale exporter based in Dubai, United Arab Emirates, founded in 2022. We supply genuine, factory-sealed consumer electronics in bulk from Dubai to retailers, distributors, and resellers worldwide.
+MIRSAQ General Trading LLC is a licensed electronics wholesale exporter based in Dubai, United Arab Emirates. We supply genuine, factory-sealed consumer electronics in bulk from Dubai to retailers, distributors, and resellers worldwide.
 
 ## What we sell
-We are an authorised wholesale supplier of the following brands:
-- Apple (iPhone 16 series, iPad, MacBook, AirPods)
-- Samsung (Galaxy S25 series, tablets, wearables)
-- Dyson (Airwrap, Supersonic, V15 Detect, Airstrait, Purifier)
-- Garmin (Fenix 8, Epix Pro, Instinct 2 Solar, Forerunner series)
-- Sony (PlayStation 5, headphones, cameras)
+We are a wholesale supplier of the following brands:
+- Apple (iPhone 18 Pro, iPhone 18 Pro Max, iPhone Air, iPhone 17 series, iPad, AirPods Pro 3, Apple Watch Series 11)
+- Samsung (Galaxy S26 Ultra, S26+, S26, Z Fold 7, Z Flip 7, Tab S10)
+- Dyson (Airwrap, Supersonic, V16, Gen5detect, V15 Detect, Airstrait)
+- Garmin (Fenix 9, Fenix 8, Epix Pro, Instinct 3, Forerunner series)
+- Sony (PlayStation 5 Pro, PS5 Slim, headphones)
+- Nintendo (Switch 2)
 - JBL (speakers, headphones, earbuds)
-- Xiaomi (smartphones, accessories)
-- Nintendo (Switch OLED, games)
-- Bose (headphones, speakers)
 
 All products are 100% genuine, factory-sealed, and carry manufacturer warranty. We do not supply replicas or grey-market goods.
 
@@ -22,30 +20,38 @@ All products are 100% genuine, factory-sealed, and carry manufacturer warranty. 
 - Distributors sourcing brands not available in their local market
 - Import/export businesses
 - Salons and professional buyers (Dyson, Garmin)
-Order sizes: single units through to full container loads — all sizes welcome.
+Order sizes: small retailers to large distributors — all order sizes welcome.
 
 ## Where we ship
-UAE (Dubai), and international export to: Russia, Kazakhstan, Uzbekistan, Azerbaijan, Armenia, Belarus, Ukraine, Kyrgyzstan, Tajikistan, Georgia, and 20+ countries across CIS, Africa, South Asia, and Southeast Asia.
+UAE (Dubai), and international export to:
+- CIS countries: Russia, Kazakhstan, Uzbekistan, Azerbaijan, Armenia, Belarus, Ukraine, Kyrgyzstan, Tajikistan, Georgia
+- Mediterranean: Cyprus (Nicosia, Limassol)
+- Indian Ocean: Maldives (Malé)
+- Africa: Nigeria, Kenya, Ghana, Tanzania, Ethiopia, South Africa
+- Europe: UK, Germany, Poland, Turkey, France
+- Asia: Pakistan, India, Bangladesh
 
 ## Contact
 - Website: https://mirsaq.ae
 - Email: info@mirsaq.ae
 - WhatsApp (Sales): +971552969386
-- WhatsApp (Support): +971526559790
 - Location: Dubai, United Arab Emirates
 
 ## Key pages
 - Homepage: https://mirsaq.ae
-- About us: https://mirsaq.ae/about
 - Browse products: https://mirsaq.ae/browse
 - Contact: https://mirsaq.ae/contact
-- Dyson wholesale: https://mirsaq.ae/dyson-wholesale-dubai
-- Garmin wholesale: https://mirsaq.ae/garmin-wholesale-dubai
-- iPhone wholesale: https://mirsaq.ae/iphone-wholesale-dubai
-- Samsung wholesale: https://mirsaq.ae/samsung-wholesale-dubai
-- PS5 wholesale: https://mirsaq.ae/playstation-wholesale-dubai
-- Dyson CIS (Russian): https://mirsaq.ae/dyson-optom-russia
-- Garmin CIS (Russian): https://mirsaq.ae/garmin-wholesale-russia
+- iPhone 18 wholesale Dubai: https://mirsaq.ae/iphone-wholesale-dubai
+- Samsung Galaxy S26 wholesale Dubai: https://mirsaq.ae/samsung-wholesale-dubai
+- Dyson wholesale Dubai: https://mirsaq.ae/dyson-wholesale-dubai
+- Garmin wholesale Dubai: https://mirsaq.ae/garmin-wholesale-dubai
+- Garmin Fenix 9 wholesale: https://mirsaq.ae/garmin-fenix-9-optom
+- Garmin Fenix 8 wholesale: https://mirsaq.ae/garmin-fenix-8-optom
+- PS5 wholesale Dubai: https://mirsaq.ae/playstation-wholesale-dubai
+- Dyson wholesale Russia (RU): https://mirsaq.ae/dyson-optom-russia
+- Dyson wholesale Kazakhstan (RU): https://mirsaq.ae/dyson-optom-kazakhstan
+- Garmin wholesale Russia (RU): https://mirsaq.ae/garmin-chasy-optom-russia
+- Garmin wholesale Kazakhstan (RU): https://mirsaq.ae/garmin-chasy-optom-kazakhstan
 - Sitemap: https://mirsaq.ae/sitemap.xml
 
 ## Entity
