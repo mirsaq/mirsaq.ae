@@ -316,7 +316,25 @@
       "Bash(node peek.js \"/c/Users/MUHAMMAD/OneDrive/Desktop/deppa/INSPECTION REPORT DEPPA- 23-5-25.xlsx\")",
       "Bash(node peek.js \"/c/Users/MUHAMMAD/OneDrive/Desktop/deppa/IMEI DETAILS/ASIA -400 IMEI.xlsx\")",
       "Bash(node peek2.js \"/c/Users/MUHAMMAD/OneDrive/Desktop/deppa/STORAGE INVOICE.xlsx\" \"\" 1 25)",
-      "Bash(node peek2.js \"/c/Users/MUHAMMAD/OneDrive/Desktop/deppa/TRANSFER_OUT_DLL.xlsx\" \"\" 1 15)"
+      "Bash(node peek2.js \"/c/Users/MUHAMMAD/OneDrive/Desktop/deppa/TRANSFER_OUT_DLL.xlsx\" \"\" 1 15)",
+      "Bash(git commit -m ' *)",
+      "mcp__claude-in-chrome__navigate",
+      "Bash(powershell -command \"Expand-Archive -Path 'https___mirsaq.ae_-Product snippets-Issue-2026-10-19.zip' -DestinationPath 'ps-oct19' -Force; Expand-Archive -Path 'https___mirsaq.ae_-Coverage-Validation-2026-10-19.zip' -DestinationPath 'cov-oct19' -Force\")",
+      "PowerShell(head -20)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\MUHAMMAD\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\gsc-oct26\")",
+      "Bash(unzip -o \"C:\\\\Users\\\\MUHAMMAD\\\\Downloads\\\\https___mirsaq.ae_-Performance-on-Search-2026-10-26.zip\")",
+      "Bash(unzip -o \"C:\\\\Users\\\\MUHAMMAD\\\\Downloads\\\\https___mirsaq.ae_-Coverage-2026-10-26.zip\")",
+      "Bash(unzip -o \"C:\\\\Users\\\\MUHAMMAD\\\\Downloads\\\\https___mirsaq.ae_-Product snippets-2026-10-26.zip\")",
+      "Bash(python -c ' *)",
+      "Bash(xargs grep -L '\"image\"')",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__list_projects",
+      "mcp__3c7df162-89c5-4d7f-a5df-6bb4e3f6de85__search_threads",
+      "mcp__9dc30f03-a710-401b-911a-b4f54fdadc72__list-brand-kits",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__run_site_audit",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__create_rank_tracker",
+      "mcp__9dc30f03-a710-401b-911a-b4f54fdadc72__get-create-design-async-job",
+      "Bash(git pull *)",
+      "Bash(git stash *)"
     ]
   }
 }
