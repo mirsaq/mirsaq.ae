@@ -334,7 +334,24 @@
       "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__create_rank_tracker",
       "mcp__9dc30f03-a710-401b-911a-b4f54fdadc72__get-create-design-async-job",
       "Bash(git pull *)",
-      "Bash(git stash *)"
+      "Bash(git stash *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\\\\\" | Where-Object { $_.Name -match \"xbox|xiaomi|redmi|nintendo|jbl|ps5|playstation|sony\" } | Select-Object Name)",
+      "Bash(play)",
+      "Bash(xbox)",
+      "Bash(nintendo)",
+      "Bash(xiaomi)",
+      "Bash(redmi)",
+      "Bash(jbl)",
+      "Bash(sony\" 2>/dev/null; ls \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\\\\\")",
+      "PowerShell(& \"C:\\\\Users\\\\MUHAMMAD\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-MUHAMMAD-OneDrive-Desktop-MIRSAQ-website\\\\eeeb6641-e106-4853-a420-77b5a4dadc69\\\\scratchpad\\\\add_nav.ps1\")",
+      "PowerShell(& \"C:\\\\Users\\\\MUHAMMAD\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-MUHAMMAD-OneDrive-Desktop-MIRSAQ-website\\\\eeeb6641-e106-4853-a420-77b5a4dadc69\\\\scratchpad\\\\hierarchy.ps1\")",
+      "Bash(python -c \"import sys,json; lines=sys.stdin.read\\(\\).strip\\(\\).splitlines\\(\\); [print\\(l[:500]\\) for l in lines[-5:]]\")",
+      "PowerShell(& \"C:\\\\Users\\\\MUHAMMAD\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-MUHAMMAD-OneDrive-Desktop-MIRSAQ-website\\\\eeeb6641-e106-4853-a420-77b5a4dadc69\\\\scratchpad\\\\hreflang.ps1\")",
+      "PowerShell(cd \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\"; $c = Get-Content \"iphone-wholesale-dubai.html\" -Raw; $c -match 'hreflang'; \\($c | Select-String 'hreflang'\\).Matches.Value | Select-Object -First 4)",
+      "Bash(Select-String -Path sitemap.xml -Pattern \"blog/\")",
+      "Bash(Measure-Object)",
+      "Bash(Select-Object -ExpandProperty Count)",
+      "PowerShell(cd \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\"; Get-ChildItem | Where-Object { $_.Name -match -join\\('xbox|nintendo|playstation|gaming|console','|'\\) } | Select-Object Name)"
     ]
   }
 }
