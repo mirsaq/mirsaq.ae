@@ -355,7 +355,8 @@
       "Bash(git commit -m 'Fix grey strip: add overflow-x:hidden + max-width:100% to body on all pages *)",
       "Bash(git commit -m 'Fix grey strip: replace 100vw hack with width:100% on footer nav *)",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\\\\\" | Where-Object { $_.Name -match 'iphone-18-pro' } | Select-Object Name | Sort-Object Name)",
-      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\\\\\" | Where-Object { $_.Name -match 'iphone' } | Select-Object Name | Sort-Object Name | Select-Object -First 20)"
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\\\\\" | Where-Object { $_.Name -match 'iphone' } | Select-Object Name | Sort-Object Name | Select-Object -First 20)",
+      "PowerShell(& \"C:\\\\Users\\\\MUHAMMAD\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-MUHAMMAD-OneDrive-Desktop-MIRSAQ-website\\\\eeeb6641-e106-4853-a420-77b5a4dadc69\\\\scratchpad\\\\inject_content.ps1\")"
     ]
   }
 }
