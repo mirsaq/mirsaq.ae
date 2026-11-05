@@ -356,7 +356,27 @@
       "Bash(git commit -m 'Fix grey strip: replace 100vw hack with width:100% on footer nav *)",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\\\\\" | Where-Object { $_.Name -match 'iphone-18-pro' } | Select-Object Name | Sort-Object Name)",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MUHAMMAD\\\\OneDrive\\\\Desktop\\\\MIRSAQ\\\\website\\\\images\\\\\" | Where-Object { $_.Name -match 'iphone' } | Select-Object Name | Sort-Object Name | Select-Object -First 20)",
-      "PowerShell(& \"C:\\\\Users\\\\MUHAMMAD\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-MUHAMMAD-OneDrive-Desktop-MIRSAQ-website\\\\eeeb6641-e106-4853-a420-77b5a4dadc69\\\\scratchpad\\\\inject_content.ps1\")"
+      "PowerShell(& \"C:\\\\Users\\\\MUHAMMAD\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-MUHAMMAD-OneDrive-Desktop-MIRSAQ-website\\\\eeeb6641-e106-4853-a420-77b5a4dadc69\\\\scratchpad\\\\inject_content.ps1\")",
+      "Bash(grep -oP '\\\\}+$')",
+      "Bash(grep -o '\"aggregateRating\".*\"review\".*}$' dyson-airstrait-optom.html)",
+      "Bash(grep -v \"^href=\\\\\"/\\\\\"$\")",
+      "Bash(grep -n '<lastmod></lastmod>\\\\|<lastmod>$' sitemap.xml)",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__get_search_console_performance",
+      "mcp__bad8e613-ccfb-4397-a7fb-73af221788e6__getBrandSettings",
+      "mcp__bad8e613-ccfb-4397-a7fb-73af221788e6__getBestTimeToPostByNetwork",
+      "mcp__9dc30f03-a710-401b-911a-b4f54fdadc72__create-design",
+      "Bash(grep -v \"^href=\\\\\"/$\\\\\"\\\\|#\\\\|mailto\\\\|tel\\\\|whatsapp\")",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__get_backlinks_overview",
+      "mcp__e7316f6e-c648-44a7-9ed2-7513ceee96dd__cb_entity_autocomplete",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__submit_indexnow_urls",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__get_audit_issues",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__list_site_audits",
+      "Bash(unzip -o \"https___mirsaq.ae_-Merchant listings-2026-11-05.zip\" -d merchant_listings)",
+      "Bash(unzip -o \"https___mirsaq.ae_-Product snippets-2026-11-05.zip\" -d product_snippets)",
+      "Bash(xargs grep -l \"@type.*Product\")",
+      "Bash(python -c \"import sys,json; d=sys.stdin.read\\(\\); start=d.find\\('{'\\); print\\(d[start:start+500]\\)\")",
+      "Bash(powershell -Command ' *)",
+      "Bash(git commit -m 'Fix Product schema: add price, priceCurrency, hasMerchantReturnPolicy to 101 pages *)"
     ]
   }
 }
