@@ -2,6 +2,20 @@
 
 ---
 
+## GSC Report — 2026-11-07 (Last 3 months)
+
+- **Clicks (3-month total):** 517
+- **Impressions (3-month total):** 7,200+
+- **Top opportunity:** iphone-wholesale-dubai — 1,460 impressions, position 43.6, 41 clicks (2.81% CTR)
+- **Product snippets:** 4 clicks, 42 impressions, pos 7.76
+
+### Actions taken today
+- Fixed Product schema (price, priceCurrency, hasMerchantReturnPolicy) on 101 pages → submitted IndexNow
+- Strengthened iphone-wholesale-dubai.html: added both WA numbers, "Dubai iPhone Wholesale Market" section, "Import iPhone from Dubai" section, internal links from russia/maldives pages
+- Requested GSC validation for Merchant Listings + Product Snippets
+
+---
+
 ## GSC Daily Report — 2026-10-31
 
 - **Clicks (3-month total):** 362
@@ -215,5 +229,58 @@ Sitemap: live, 134 URLs. Its processing status in GSC wasn't checked (needs the 
 - **Blocker:** sign the built-in browser in to Google (mjjunu313@gmail.com), or connect Claude in Chrome, so daily runs can open the GSC UI and request indexing
 - Request indexing for: blog/garmin-wholesale-dubai-guide, blog/apple-wholesale-dubai-guide, blog/iphone-wholesale-dubai-guide, blog/jbl-wholesale-dubai-guide, blog/electronics-wholesale-russia-guide, /contact, iphone-wholesale-saudi-arabia (last crawl 20 Sep)
 - Recheck blog/iphone-import-dubai CTR after Google recrawls it
+
+---
+
+## GSC Daily Report — 2026-11-07
+
+_Data window: 29 Oct – 4 Nov 2026 vs 22–28 Oct (GSC lags about 3 days). Pulled through the OpenSEO Search Console API. The built-in browser is still signed out of Google and Claude in Chrome isn't connected, so the GSC UI couldn't be opened (fourth run in a row)._
+
+- **Clicks (7d):** 66 (+69.2% vs 39)
+- **Impressions (7d):** 754 (−16.1% vs 899)
+- **Avg CTR:** 8.75% (was 4.34%)
+- **Avg position:** 22.0 (was 22.1, impression-weighted)
+- **Pages with impressions:** 94 (was 88)
+- **Indexed / Not indexed:** not available (needs the GSC UI; last known 91 / 28 on 2026-10-31)
+- **New issues:** None
+- **Actions taken:** None. Indexing requests can't be made through the API, and nothing needed fixing. All checked URLs return 200, and the sitemap is live with 134 URLs.
+
+### Notes
+- 2–4 Nov were the three best days on record (13, 14 and 12 clicks). 4 Nov had 169 impressions, the most in two weeks, at position 29.8, so deep-SERP impressions are coming back.
+- iphone-wholesale-dubai: impressions 283 → 142 and position 44.9 → 54.0. This is the main reason impressions are down.
+- Homepage: 2 → 12 clicks, position 12.6 → 3.4.
+
+### Pages with >20% fewer clicks (all small numbers)
+| Page | Prev → Now | Note |
+|---|---|---|
+| iphone-wholesale-dubai | 6 → 3 | Position 44.9 → 54.0 |
+| playstation-wholesale-dubai | 4 → 2 | Impressions 52 → 25; recrawled 5 Nov, indexed |
+| iphone-wholesale-saudi-arabia | 2 → 0 | Position 12.2 → 32.6, second week falling; last crawled 20 Sep → **request indexing** |
+| ps5-wholesale-kazakhstan, electronics-wholesale-armenia, electronics-wholesale-belarus | 2 → 1 | |
+| blog/iphone-import-dubai | 1 → 0 | 27 impressions at position 6.2, 0% CTR. Google last crawled it 11 Sep, so the 31 Oct title/meta refresh hasn't been seen yet → **request indexing** |
+| electronics-wholesale-kazakhstan/-nigeria/-pakistan, dyson-v15-optom, garmin-fenix-8-optom, garmin-wholesale-maldives, xiaomi-wholesale-russia | 1 → 0 | |
+
+### Gaining traction
+- ps5-wholesale-russia 3 → 13 clicks (CTR 20.6%), homepage 2 → 12, xbox-wholesale-russia 1 → 5, iphone-wholesale-russia 3 → 5
+- nintendo-wholesale-russia 0 → 3; electronics-wholesale-cis and electronics-wholesale-tajikistan 0 → 2 each
+- First clicks: dyson-optom-kazakhstan, dyson-wholesale-russia, dyson-airstrait-optom, electronics-wholesale-bahrain/-congo/-maldives/-russian, garmin-fenix-9-optom, garmin-chasy-optom-azerbaijan, iphone-wholesale-maldives, ps5-wholesale-saudi-arabia
+
+### URL Inspection checks
+| URL | Status |
+|---|---|
+| blog/garmin-wholesale-dubai-guide | Discovered, not indexed yet (no change) |
+| blog/apple-, iphone-, jbl-wholesale-dubai-guide, blog/electronics-wholesale-russia-guide | Still unknown to Google. All live (200) and in the sitemap |
+| /contact | Same stale "Redirect error" from the 26 Aug crawl; live 200 |
+| blog/dyson-wholesale-dubai-guide | Indexed ✓ (crawled 2 Nov) |
+| playstation-wholesale-dubai | Indexed ✓ (crawled 5 Nov). Merchant listings warnings: missing `validFrom` and `shippingRate` (warnings only) |
+| iphone-wholesale-saudi-arabia, blog/iphone-import-dubai | Indexed ✓, but crawls are stale (20 Sep and 11 Sep) |
+
+### Not checked today (needs a signed-in GSC UI)
+- Page indexing counts, Core Web Vitals, sitemap processing status, Manual actions / Security. Last check (31 Oct): no manual actions, CWV no data.
+
+### Next
+- **Blocker:** sign the built-in browser in to Google (mjjunu313@gmail.com), or connect Claude in Chrome, so daily runs can open the GSC UI and request indexing
+- Request indexing (9 URLs): blog/garmin-, apple-, iphone- and jbl-wholesale-dubai-guide, blog/electronics-wholesale-russia-guide, blog/iphone-import-dubai, iphone-wholesale-saudi-arabia, /contact, iphone-wholesale-dubai
+- Optional: add `shippingDetails` and `priceValidUntil` to the Product offers to clear the Merchant listings warnings
 
 ---
