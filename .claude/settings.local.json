@@ -376,7 +376,13 @@
       "Bash(xargs grep -l \"@type.*Product\")",
       "Bash(python -c \"import sys,json; d=sys.stdin.read\\(\\); start=d.find\\('{'\\); print\\(d[start:start+500]\\)\")",
       "Bash(powershell -Command ' *)",
-      "Bash(git commit -m 'Fix Product schema: add price, priceCurrency, hasMerchantReturnPolicy to 101 pages *)"
+      "Bash(git commit -m 'Fix Product schema: add price, priceCurrency, hasMerchantReturnPolicy to 101 pages *)",
+      "Bash(grep \"\\\\.html$\")",
+      "Bash(unzip -o \"https___mirsaq.ae_-Performance-on-Search-2026-11-07.zip\" -d gsc_perf_1107)",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__get_ranked_keywords",
+      "Bash(xargs sed -i 's|<a href=\"/\" class=\"nav-brand\"><img src=\"logo-p-transparent.png\" alt=\"MIRSAQ\">MIRSAQ</a>|<a href=\"/\" class=\"nav-brand\"><img src=\"/logo-p-transparent.png\" alt=\"MIRSAQ General Trading LLC\"></a>|g')",
+      "Bash(xargs sed -i 's|<a class=\"nav-brand\" href=\"/\"><img src=\"logo-p-transparent.png\" alt=\"MIRSAQ\">MIRSAQ</a>|<a class=\"nav-brand\" href=\"/\"><img src=\"/logo-p-transparent.png\" alt=\"MIRSAQ General Trading LLC\"></a>|g')",
+      "Bash(xargs sed -i 's|<img src=\"logo-p-transparent.png\" alt=\"MIRSAQ\"><span>MIRSAQ</span>|<img src=\"/logo-p-transparent.png\" alt=\"MIRSAQ General Trading LLC\">|g')"
     ]
   }
 }
