@@ -382,7 +382,19 @@
       "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__get_ranked_keywords",
       "Bash(xargs sed -i 's|<a href=\"/\" class=\"nav-brand\"><img src=\"logo-p-transparent.png\" alt=\"MIRSAQ\">MIRSAQ</a>|<a href=\"/\" class=\"nav-brand\"><img src=\"/logo-p-transparent.png\" alt=\"MIRSAQ General Trading LLC\"></a>|g')",
       "Bash(xargs sed -i 's|<a class=\"nav-brand\" href=\"/\"><img src=\"logo-p-transparent.png\" alt=\"MIRSAQ\">MIRSAQ</a>|<a class=\"nav-brand\" href=\"/\"><img src=\"/logo-p-transparent.png\" alt=\"MIRSAQ General Trading LLC\"></a>|g')",
-      "Bash(xargs sed -i 's|<img src=\"logo-p-transparent.png\" alt=\"MIRSAQ\"><span>MIRSAQ</span>|<img src=\"/logo-p-transparent.png\" alt=\"MIRSAQ General Trading LLC\">|g')"
+      "Bash(xargs sed -i 's|<img src=\"logo-p-transparent.png\" alt=\"MIRSAQ\"><span>MIRSAQ</span>|<img src=\"/logo-p-transparent.png\" alt=\"MIRSAQ General Trading LLC\">|g')",
+      "Skill(schedule)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('mcpServers',{}\\), indent=2\\)\\)\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2\\)\\)\")",
+      "Bash(xargs grep -l \"mcp\\\\|MCP\\\\|server\")",
+      "Bash(xargs grep -l \"mcpServer\\\\|mcp_server\\\\|04f4738e\")",
+      "Bash(xargs grep -l \"mcp\\\\|server\")",
+      "Bash(xargs grep -l \"mcpServers\")",
+      "Bash(xargs grep -l \"04f4738e\\\\|mcpServers\")",
+      "Bash(xargs cat)",
+      "Bash(xargs grep -l \"04f4738e\")",
+      "mcp__04f4738e-7d6a-4962-b908-11e8c309f959__inspect_urls",
+      "Bash(python -)"
     ]
   }
 }

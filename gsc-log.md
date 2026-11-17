@@ -453,3 +453,64 @@ _Data window: 2–8 Nov 2026 vs 26 Oct–1 Nov (GSC lags about 3 days). Pulled t
 - Watch iphone-wholesale-dubai once Google recrawls it after the 9 Nov update. If it's still past 60, review it against the top-ranking competitor pages
 
 ---
+
+## GSC Daily Report — 2026-11-17
+
+_Data window: 8–14 Nov 2026 vs 1–7 Nov (GSC lags about 3 days). Pulled through the OpenSEO Search Console API. The built-in browser is still signed out of Google (it opened the Google sign-in page), so the GSC UI couldn't be opened (eighth run in a row)._
+
+- **Clicks (7d):** 71 (−5.3% vs 75)
+- **Impressions (7d):** 912 (+4.8% vs 870)
+- **Avg CTR:** 7.79% (was 8.62%)
+- **Avg position:** 21.3 (was 25.2, impression-weighted, so better)
+- **Pages with impressions:** 97 (was 92)
+- **Indexed / Not indexed:** not available (needs the GSC UI; last known 91 / 28 on 2026-10-31)
+- **New issues:** None. All checked URLs return 200; the live sitemap has 134 URLs (same as local).
+- **Actions taken:** None. Nothing needed fixing, and indexing requests can't be made through the API.
+
+### Notes
+- First week-over-week click dip since tracking began, but it's small (−4). 15–16 Nov (partial data): 11 and 6 clicks.
+- **Russian pages lost clicks:** ps5-wholesale-russia 14 → 8 (position 9.8 → 11.6), iphone-wholesale-russia 13 → 5 (position steady at 4.8 → 5.2, so this is lower CTR, not ranking), xbox-wholesale-russia 5 → 1. Most of these clicks come from anonymised queries, so the cause can't be pinned down from the data. Google recrawled iphone-wholesale-russia today (17 Nov).
+- **iphone-wholesale-dubai is recovering:** position 65.4 → 50.4, impressions 178 → 203. Google recrawled it on 16 Nov, so the 9 Nov update is now being counted.
+- **blog/jbl-wholesale-dubai-guide is now indexed** (crawled 13 Nov), already at position 3.1.
+- Homepage was redesigned 13–14 Nov (light theme). Recrawled 14 Nov, still indexed, position steady at 4.9. Both WhatsApp numbers are present.
+
+### Pages with >20% fewer clicks
+| Page | Prev → Now | Note |
+|---|---|---|
+| iphone-wholesale-russia | 13 → 5 | Position 4.8 → 5.2; CTR 24.5% → 10.9%. Recrawled 17 Nov |
+| ps5-wholesale-russia | 14 → 8 | Position 9.8 → 11.6, impressions up 52 → 85. Last crawl 31 Oct |
+| homepage | 12 → 9 | Position 4.9 (same), impressions up 58 → 86 |
+| xbox-wholesale-russia | 5 → 1 | Position 6.6 → 5.7, so CTR |
+| electronics-wholesale-congo, -kyrgyzstan, -tajikistan | 2 → 0 | |
+| dyson-airstrait-optom, dyson-optom-kazakhstan, electronics-wholesale-armenia/-cis/-maldives/-sri-lanka, garmin-wholesale-kazakhstan, nintendo-wholesale-russia | 1 → 0 | |
+
+### Gaining traction
+- ps5-wholesale-kazakhstan 0 → 4, electronics-wholesale-oman 0 → 3, iphone-wholesale-saudi-arabia 0 → 3 (recrawled 16 Nov)
+- 0 → 2 clicks: nintendo-wholesale-dubai, xiaomi-wholesale-dubai, elektronika-optom-cis; playstation-wholesale-dubai 2 → 3
+- **blog/iphone-import-dubai got its first click** (20 impressions, position 5.0)
+- First clicks: accessories-wholesale-dubai, blog/apple-wholesale-dubai-guide, dyson-optom-belarus/-tajikistan, dyson-wholesale-dubai, electronics-wholesale-ethiopia/-gcc/-kuwait/-russian/-saudi-arabia/-uzbekistan, jbl-wholesale-maldives
+
+### URL Inspection checks
+| URL | Status |
+|---|---|
+| blog/jbl-wholesale-dubai-guide | **Indexed now** (crawled 13 Nov) ✓ |
+| blog/garmin-wholesale-dubai-guide | Still "Discovered – currently not indexed". Live 200 |
+| /contact | Same stale "Redirect error" from the 26 Aug crawl; live 200 |
+| iphone-wholesale-dubai, iphone-wholesale-saudi-arabia | Indexed, recrawled 16 Nov ✓ |
+| iphone-wholesale-russia | Indexed, recrawled 17 Nov ✓ |
+| Homepage | Indexed (14 Nov) ✓ |
+| ps5-wholesale-russia | Indexed (31 Oct). Warnings: review/aggregateRating, shippingRate |
+| sony-wholesale-dubai | Indexed, but last crawled 19 Oct |
+| blog/iphone-import-dubai | Indexed, but last crawled 11 Sep, so the 31 Oct title/meta refresh still isn't seen |
+
+Rich results: warnings only (validFrom, shippingRate, review/aggregateRating). No errors.
+
+### Not checked today (needs a signed-in GSC UI)
+- Page indexing counts, Core Web Vitals, sitemap processing status, Manual actions / Security. Last check (31 Oct): no manual actions, CWV no data.
+
+### Next
+- **Blocker:** sign the built-in browser in to Google (mjjunu313@gmail.com) so daily runs can open the GSC UI and request indexing
+- Request indexing (5 URLs): blog/garmin-wholesale-dubai-guide, /contact, blog/iphone-import-dubai, sony-wholesale-dubai, ps5-wholesale-russia
+- Watch the Russian pages' CTR next week. If iphone-wholesale-russia stays near 10% CTR at position ~5, refresh its title/meta
+
+---
